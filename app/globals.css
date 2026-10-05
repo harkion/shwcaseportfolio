@@ -1,6 +1,8 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0b2233;
+  --foreground: #eff8fa;
+  --text-secondary: #a9c0cc;
+  --accent: #45bdd8;
 }
 
 * {
@@ -34,4 +36,137 @@ body {
 .starter p {
   margin: 0;
   line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.hero {
+  min-height: 85svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  margin: 2rem 0;
+  font-size: clamp(3.5rem, 12vw, 10.5rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-title span:nth-child(2) {
+  margin-left: 0.35em;
+}
+
+.hero-title span:nth-child(3) {
+  margin-left: 0.7em;
+}
+
+.hero > a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.4rem;
+  background: var(--accent);
+  color: var(--background);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero > a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Shared page spacing */
+.site-header,
+main > section,
+.site-footer {
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+}
+
+/* Navigation */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+}
+
+.site-name {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-header a {
+  color: var(--foreground);
+}
+
+.site-header nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  color: var(--accent);
+}
+
+/* Keyboard navigation */
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+/* Content sections */
+main > section {
+  padding-block: 5rem;
+}
+
+main p {
+  max-width: 60ch;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+main a {
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  padding-block: 2rem;
+  color: var(--text-secondary);
+}
+
+/* Smaller screens */
+@media (max-width: 40rem) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main > section {
+    padding-block: 3rem;
+  }
 }
