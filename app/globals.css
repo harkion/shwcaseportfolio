@@ -231,3 +231,15 @@ main a {
 .project-card--draft {
   border-style: dashed;
 }
+
+.archive-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 60rem) {
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
