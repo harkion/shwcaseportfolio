@@ -1,4 +1,3 @@
-import "./globals.css";
 import ProjectCard from "./components/ProjectCard";
 import Link from "next/link";
 import { projects } from "./data/projects";
@@ -6,7 +5,7 @@ import { projects } from "./data/projects";
 export default function Home() {
   return (
     <>
-      <main>
+      <main className="home-page">
         <section className="hero" aria-labelledby="hero-title">
           <p className="section-label">Portfolio · Web & mobile development</p>
 
@@ -38,6 +37,8 @@ export default function Home() {
                 status={project.status}
                 description={project.description}
                 href={project.href}
+                logoSrc={project.logoSrc}
+                previewAlt={project.previewAlt}
               />
             ))}
 

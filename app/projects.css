@@ -1,0 +1,169 @@
+.project-card {
+  /* margin-top: 2rem; */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.project-preview {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.project-content {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.project-content .project-status {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-content h3 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.project-content > a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  text-underline-offset: 0.25em;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-grid > .project-card {
+  min-width: 0;
+}
+
+@media (min-width: 60rem) {
+  .project-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .project-grid > .project-card {
+    grid-column: span 3;
+  }
+
+  .project-grid > .project-card:first-child {
+    grid-column: span 4;
+  }
+
+  .project-grid > .project-card:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+
+.project-card--draft {
+  border-style: dashed;
+}
+
+.archive-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 60rem) {
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.zest-case {
+  max-width: 45rem;
+}
+
+.zest-intro {
+  margin-block: 3rem;
+}
+
+.zest-intro h1 {
+  margin-block: 0.5rem 1rem;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  line-height: 1;
+}
+
+.zest-case h2 {
+  margin-block: 3rem 0.75rem;
+}
+
+.zest-case figure {
+  margin: 1.5rem 0 3rem;
+}
+
+.zest-case figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.zest-case figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  max-width: 45rem;
+  max-height: 75svh;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  margin-block: 1rem 2rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--background);
+}
+
+.case-figure {
+  max-width: 45rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.case-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.case-figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.project-logo {
+  max-width: min(70%, 15rem);
+  max-height: 70%;
+  margin: auto;
+  object-fit: contain;
+  border-radius: 1.5rem;
+}
+
+.project-screenshot {
+  object-fit: contain;
+}
